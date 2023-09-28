@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lionel Messi Design</title>
+    <style>
+        /* Reset some default browser styles */
+        body, h1, p {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Define el fondo con una animación de desplazamiento */
+        body {
+            background-image: url('messi.jpg'); /* Reemplaza con tu imagen de fondo */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            font-family: Arial, sans-serif;
+            color: white;
+            text-align: center;
+            animation: backgroundAnimation 20s linear infinite alternate;
+        }
+
+        /* Define la animación del fondo */
+        @keyframes backgroundAnimation {
+            0% {
+                background-position: 0% 0%;
+            }
+            100% {
+                background-position: 100% 0%;
+            }
+        }
+
+        /* Estilo de la tarjeta de Messi */
+        .messi-card {
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+            padding: 20px;
+            max-width: 400px;
+            margin: 100px auto;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        /* Efecto de aparición */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Estilo de la imagen de Messi */
+        .messi-image img {
+            width: 200px;
+            border-radius: 50%;
+            border: 4px solid white;
+            animation: rotate 5s linear infinite;
+        }
+
+        /* Animación de rotación de la imagen */
+        @keyframes rotate {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* Estilo del nombre de Messi */
+        .messi-info h1 {
+            font-size: 24px;
+            margin-top: 10px;
+        }
+
+        /* Estilo del número de camiseta de Messi */
+        .messi-info p {
+            font-size: 18px;
+            margin-top: 5px;
+        }
+
+        /* Agrega espacio en la parte inferior de la tarjeta */
+        .messi-info {
+            margin-bottom: 20px;
+        }
+
+        /* Estilo del balón de fútbol */
+        .football {
+            width: 50px;
+            height: 50px;
+            background: white;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 0;
+            animation: roll 5s linear infinite;
+        }
+
+        /* Animación de rodar */
+        @keyframes roll {
+            0% {
+                left: 0;
+                transform: translate(0, -50%);
+            }
+            100% {
+                left: 100%;
+                transform: translate(-100%, -50%);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="messi-card">
+        <div class="messi-image">
+            <img src="messi.jpg" alt="Lionel Messi">
+        </div>
+        <div class="messi-info">
+            <h1>Lionel Messi</h1>
+            <p>Número de camiseta: 10</p>
+        </div>
+    </div>
+
+    <!-- Añade el balón de fútbol -->
+    <div class="football"></div>
+</body>
+</html>
